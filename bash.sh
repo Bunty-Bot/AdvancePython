@@ -11,7 +11,7 @@ cd "$REPO_DIR";
 # Debugging: Confirm we&#39;re in the right directory
 echo ";Successfully changed to repository directory.";
 # Ask the user for the filename they want to commit
-read -p "Enter the name of the file to commit (with relative path):FILE_NAME "
+read -p "Enter the name of the file to commit (with relative path): " FILE_NAME
 # Check if the file exists
 if [ ! -f "$FILE_NAME" ]  ; then
     echo "Error: File '$FILE_NAME' does not exist.";
