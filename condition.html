@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Conditions</title>
+</head>
+<body>
+<h1>conditions</h1>
+<table>
+    <tr><th>Name</th><th>Symptoms</th><th>Description</th></tr>
+    {% for c in data %}
+    <tr><td>{{c[1]}}</td><td>{{c[2]}}</td><td>{{c[3]}}</td></tr>
+    {% end for %}
+</table>
+
+<form method = 'POST' action="/add_condition">
+    <input name="name" placeholder="Name">
+    <input name="symptoms" placeholder="Symptoms">
+    <input name="description" placeholder="Description">
+    <button> Add Condition </button>
+</form>
+
+</body>
+</html>

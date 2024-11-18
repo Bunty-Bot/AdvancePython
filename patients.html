@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patients</title>
+</head>
+<body>
+<h1>patients</h1>
+<table>
+    <tr><th>Name</th><th>Age</th><th>Gender</th><th>Condition</th></tr>
+    {% for p in data %}
+    <tr><td>{{p[0]}}</td><td>{{p[1]}}</td><td>{{p[2]}}</td><td>{{p[3]}}</td></tr>
+    {% end for %}
+</table>
+
+<form method="post" action="/add_patient">
+    <input name="name" placeholder="Name">
+    <input name="age" placeholder="Age">
+    <input name="gender" placeholder="Gender">
+    <input name="condition_id" placeholder="Condition">
+    <button> Add Patient </button>
+</form>
+
+
+</body>
+</html>
